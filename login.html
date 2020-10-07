@@ -70,28 +70,28 @@
         }
 
         // Password validation 
-		var psw = document.forms["register"]["psw"].value;
-		if (psw == "") {
-			alert("password must be filled out");
-			return false;
-		} 
-		if (psw.search(/[a-z]/) < 0) {
+// 		var psw = document.forms["register"]["psw"].value;
+// 		if (psw == "") {
+// 			alert("password must be filled out");
+// 			return false;
+// 		} 
+// 		if (psw.search(/[a-z]/) < 0) {
 
-	    	alert("Your password must contain at least one lowercase letter.")
-	    	return false;
-		}
-		if (psw.search(/[A-Z]/) < 0) {
-	 	  	alert("Your password must contain at least one uppercase letter.")
-	 	  	return false;
-	 	}
-		if (psw.search(/[0-9]/) < 0) {
-			alert("Your password must contain at least one digit.")
-			return false;
-		}
-		if(psw.search(/[\!\@\#\$\%\^\&\*\(\)\_\+\.\,\;\:\-]/) < 0) {
-		 	 alert("Your password must contain at least one special character.")
-		 	 return false;
-		}
+// 	    	alert("Your password must contain at least one lowercase letter.")
+// 	    	return false;
+// 		}
+// 		if (psw.search(/[A-Z]/) < 0) {
+// 	 	  	alert("Your password must contain at least one uppercase letter.")
+// 	 	  	return false;
+// 	 	}
+// 		if (psw.search(/[0-9]/) < 0) {
+// 			alert("Your password must contain at least one digit.")
+// 			return false;
+// 		}
+// 		if(psw.search(/[\!\@\#\$\%\^\&\*\(\)\_\+\.\,\;\:\-]/) < 0) {
+// 		 	 alert("Your password must contain at least one special character.")
+// 		 	 return false;
+// 		}
 		// var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
 		// if(psw.match(decimal)) 
 		// { 
@@ -121,21 +121,21 @@
 
 		    <p><b>Email id</b></p>
 		    <input type="text" placeholder="Enter email id" name="emailid"><br>
-
+<!-- 
 		    <p><b>Password</b></p>
-		    <input type="password" placeholder="Enter Password" name="psw"><br><br>
+		    <input type="password" placeholder="Enter Password" name="psw"><br><br> -->
 
 		    <button type="submit">Submit
 <!-- 		    	<a href="./index.html" style="text-decoration: none; color: #111111">
 			     Submit
 			   </a> -->
 			</button>
-		       
+<!-- 		       
 		    <input type="checkbox" checked="checked" name="remember"> Remember me
 		  </div>
 		  <div class="container">
 		    <span class="psw">Forgot <a href="#">password?</a></span>
-		  </div>
+		  </div> -->
 		  <br>
 	</form> 
 </body>
