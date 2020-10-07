@@ -1,0 +1,189 @@
+body {
+	font: 15px/1.5 Arial;
+	padding: 0;
+	margin: 0;
+	background: #f4f4f4;
+}
+
+.tab { margin-left: 40px; }
+
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+header {
+	background: #35424a;
+	color: #ffffff;
+	padding-top: 30px;
+	min-height: 60px;
+	border-bottom: #e8491d 3px solid; 
+}
+
+header a {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+header ul {
+	padding: 0;
+}
+
+header li {
+	float: left;
+	display: inline;
+	padding : 0 20px 0 20px;
+	margin-bottom: 0;
+}
+
+header #logo {
+	padding: 0;
+	margin: 0;
+	
+}
+
+header .container div {
+	display: inline-block;
+}
+
+header h1 {
+	margin-left: 50px;
+	margin-bottom: 0;
+	font-size: 60px
+}
+
+header h2 {
+	margin-left: 50px;
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+header nav {
+	float: right;
+}
+
+#sidenav nav {
+  float: left;
+  width: 20%;
+  height: 100%; /* only for demonstration, should be removed */
+  padding: 20px;
+  position: absolute;
+  margin-top: 0;
+}
+
+
+#sidenav li {
+	padding : 0 20px 0 20px;
+}
+
+#sidenav a {
+	color: #35424a;
+	text-decoration: none;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+#mboxes {
+	margin-left: 300px;
+	        height: 300px;
+
+	      /*  display: table;
+        clear: both;*/
+}
+
+#mboxes .box1 {
+/*	float: right;
+	text-align: center;
+	width: 50%;
+	padding: 10px; */
+	        float: left;
+        width: 10%;
+        padding: 0 10px;
+        margin-left: 30px;
+}
+#mboxes .box2 {
+/*	float: right;
+	text-align: center;
+	width: 50%;
+	padding: 10px; */
+	        float: left;
+        width: 80%;
+        padding: 0 10px;
+}
+/*#mboxes .h2 {
+	text-align: left; 
+}
+*/
+#mboxes .box img {
+	width: 100px;
+	height: 200px;
+	padding: 20px;
+}
+footer {
+	background: #35424a;
+	color: #ffffff;
+	min-height: 200px;
+}
+
+footer p {
+	font-size: 18px; 
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 40;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 10px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  float: right;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.li {
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 16px;
+	padding: 10px;
+
+}

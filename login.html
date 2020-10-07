@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Login</title>
+</head>
+
+<script type="text/javascript">
+	
+	function validateForm()
+	{
+		// Username validation
+		var uname = document.forms["register"]["name"].value;
+		if (uname == "") {
+			alert("Name must be filled out");
+			return false;
+		} 
+
+		// Phone number validation
+		var cno = document.forms["register"]["cno"].value;
+		if (cno == "") {
+			alert("Contact no must be filled out");
+			return false;
+		} 
+		else
+		{
+			// check if number does not contain digits
+			if(isNaN(cno)) {				
+				alert("Please enter a valid number");
+				return false;
+			}
+			// Number has to be of 10 digits
+			else if(cno.toString().length != 10) {				
+				alert("Contact number must be of 10 digits");
+				return false;
+			}
+			// Number should start with either 7 or 8 or 9
+			else if(cno.toString()[0] != '7' && cno.toString()[0] != '8' && cno.toString()[0] != '9') {
+				alert("Contact no must start with either 7 or 8 or 9");
+				return false;
+			}
+		}
+
+		// Email id validation
+		var email = document.forms["register"]["emailid"].value;
+		var p1 = email.indexOf("@");  
+
+
+		if (email == "") {
+			alert("email id must be filled out");
+			return false;
+		} 
+		// There has to be at least one character before @ symbol
+		else if (p1 < 1){  
+		  alert("Please enter a valid e-mail address");  
+		  return false;    		
+  		} 
+
+        var parts = email.split("@");
+        var dot = parts[1].indexOf(".");
+        var len = parts[1].length;
+        var dotSplits = parts[1].split(".");
+        var dotCount = dotSplits.length - 1; 
+ 
+        //Check whether Dot is present, and that too minimum 1 character after @.
+        if (dot == -1 || dot == len - 1 || dot < 1 || dotCount > 1) {
+        	alert("Please enter a valid e-mail address"); 
+            return false;
+        }
+
+        // Password validation 
+		var psw = document.forms["register"]["psw"].value;
+		if (psw == "") {
+			alert("password must be filled out");
+			return false;
+		} 
+		if (psw.search(/[a-z]/) < 0) {
+
+	    	alert("Your password must contain at least one lowercase letter.")
+	    	return false;
+		}
+		if (psw.indexOf(/[A-Z]/) < 0) {
+	 	  	alert("Your password must contain at least one uppercase letter.")
+	 	  	return false;
+	 	}
+		if (psw.indexOf(/[0-9]/) < 0) {
+			alert("Your password must contain at least one digit.")
+			return false;
+		}
+		if(psw.indexOf(/[\!\@\#\$\%\^\&\*\(\)\_\+\.\,\;\:\-]/) < 0) {
+		 	 alert("Your password must contain at least one special character.")
+		 	 return false;
+		}
+		// var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+		// if(psw.match(decimal)) 
+		// { 
+		// 	return true;
+		// }
+		// else
+		// { 
+		// 	alert('Invalid password ! It should have at least following :\n  at least one lowercase letter\n  at least one uppercase letter\n  at least one numeric digit\n  at least one special character ( !, @, #, $)')
+		// 	return false;
+		// }
+
+
+		return true;
+	}
+
+</script>
+
+<body>
+	<form name="register" action="./index.html" method="post" style="border: ridge; padding-left: 20px;" onsubmit="return validateForm()">
+		  <h2>Register</h2>
+		  <div class="container" style="">
+		    <p><b>Name</b></p>
+		    <input type="text" placeholder="Enter your name" name="name"><br>
+
+		    <p><b>Contact no.</b></p>
+		    <input type="text" placeholder="Enter contact number" name="cno"><br>
+
+		    <p><b>Email id</b></p>
+		    <input type="text" placeholder="Enter email id" name="emailid"><br>
+
+		    <p><b>Password</b></p>
+		    <input type="password" placeholder="Enter Password" name="psw"><br><br>
+
+		    <button type="submit">Submit
+<!-- 		    	<a href="./index.html" style="text-decoration: none; color: #111111">
+			     Submit
+			   </a> -->
+			</button>
+		       
+		    <input type="checkbox" checked="checked" name="remember"> Remember me
+		  </div>
+		  <div class="container">
+		    <span class="psw">Forgot <a href="#">password?</a></span>
+		  </div>
+		  <br>
+	</form> 
+</body>
+</html>
+
